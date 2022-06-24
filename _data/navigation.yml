@@ -1,6 +1,6 @@
 - name: Home
-  link: /Personal-Website/
+  link: /
 - name: Projects
-  link: /Personal-Website/projects.html
+  link: /projects.html
 - name: Blog
-  link: /Personal-Website/blog.html
+  link: /blog.html

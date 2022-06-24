@@ -1,10 +1,13 @@
 ---
-layout: default
 title: Blog
 ---
 
 <ul>
-    <li><p>PLACEHOLDER: link to post goes here</p></li>
-    <li><p>PLACEHOLDER: link to post goes here</p></li>
-    <li><p>PLACEHOLDER: link to post goes here</p></li>
+    {% for post in site.posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        {{ post.excerpt }}
+        <a href="{{ post.url }}">Read more</a>
+    </li>
+    {% endfor %}
 </ul>
