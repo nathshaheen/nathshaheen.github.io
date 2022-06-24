@@ -1,11 +1,11 @@
 ---
-title: First Project
+title: Third Project
 thumbnail: /assets/images/project1.png
 tags: Tag1 Tag2 Tag3
 description: Description text
 ---
 
-This is my first project!
+This is my third project!
 
 ![Image]({{ page.thumbnail }})
 

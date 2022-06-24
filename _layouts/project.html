@@ -2,6 +2,7 @@
 layout: default
 ---
 
-<h2>{{ page.name }}</h2>
-
+<img src="{{ page.thumbnail }}" alt="Thumbnail">
+{% include collection-header.html %}
+<p>{{ page.description }}</p>
 {{ content }}
