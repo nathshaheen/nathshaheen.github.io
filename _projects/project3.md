@@ -2,6 +2,7 @@
 title: Third Project
 thumbnail: /assets/images/project1.png
 tags: Tag1 Tag2 Tag3
+date: 2022-06-23
 description: Description text
 ---
 

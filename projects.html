@@ -4,12 +4,6 @@ title: Projects
 
 <ul>
     {% for project in site.projects %}
-    <li>
-        <img src="{{ project.thumbnail }}" alt="Image" />
-        <h2>{{ project.title }}</h2>
-        <p>{% for tag in project.tags %}{{ tag }} {% endfor %}</p>
-        <p>{{ project.description }}</p>
-        <a href="{{ project.url }}">Learn more</a>
-    </li>
+    <li>{% include project_link.html %}</li>
     {% endfor %}
 </ul>

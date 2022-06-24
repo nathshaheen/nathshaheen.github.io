@@ -1,1 +1,23 @@
-.current { color: red; }
+* { margin: 0; padding: 0; color: white; text-decoration: none; }
+
+body { background-color: #2d2d2f; margin: 0 auto; width: 50vw; }
+
+.title { font-family: 'Space Mono', monospace; font-size: 4rem; }
+
+.subtitle { font-family: 'Space Mono', monospace; font-size: 2rem; }
+
+.subsubtitle { font-family: 'Space Mono', monospace; font-size: 1rem; color: rgba(255, 255, 255, 0.5); }
+
+.body { font-family: 'Rubik', sans-serif; font-size: 1.5rem; }
+
+.current { font-family: 'Rubik', sans-serif; font-size: 2rem; color: #007bff; }
+
+.button { font-family: 'Rubik', sans-serif; font-size: 2rem; color: red; }
+
+ul { list-style-type: none; }
+
+nav ul { display: flex; }
+
+nav ul li { padding-right: 2rem; }
+
+footer { position: absolute; bottom: 0; right: 0; }
