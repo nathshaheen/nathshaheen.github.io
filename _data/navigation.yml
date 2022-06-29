@@ -1,6 +1,9 @@
 - name: About
   link: /
+  alignment: left
 - name: Projects
   link: /projects.html
+  alignment: center
 - name: Blog
   link: /blog.html
+  alignment: right

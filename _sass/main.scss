@@ -30,6 +30,19 @@ body {
     background-color: hsl(240, 2%, 18%);
     margin: 0 auto;
     width: 50vw;
+    max-width: 1000px;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
 }
 
 .title {
@@ -44,28 +57,34 @@ body {
 
 .subsubtitle {
     font-family: 'Space Mono', monospace; 
-    font-size: 1rem;
+    font-size: 0.75rem;
     color:hsla(0, 0%, 100%, 0.5);
 }
 
 .body {
     font-family: 'Rubik', sans-serif; 
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.link {
+    font-family: 'Rubik', sans-serif; 
     font-size: 1.5rem;
 }
 
-.current {
+.link-current {
     font-family: 'Rubik', sans-serif;
     font-size: 2rem;
-    color: hsl(211, 100%, 50%);
+    background: hsl(210, 100%, 52%);
+    background: linear-gradient(90deg, hsl(210, 100%, 52%) 0%, hsl(135, 64%, 50%) 100%);
+    padding: 0.25rem;
 }
 
-.button {
+.typo-button {
     font-family: 'Rubik', sans-serif;
-    font-size: 2rem;
-    color: red;
+    font-size: 1.5rem;
+    color: #ffffff;
 }
-
-
 
 ul {
     list-style-type: none;
@@ -73,14 +92,96 @@ ul {
 
 nav ul {
     display: flex;
+    align-items: baseline;
 }
 
 nav ul li {
-    padding-right: 2rem;
+    text-align: left;
+    width:125px
 }
 
 footer {
-    position: absolute;
+    position: fixed;
+    overflow-y:scroll;
     bottom: 0;
     right: 0;
+}
+
+footer i {
+    margin: 0 1rem 1rem 0;
+}
+
+.social-link {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.social-link-icon {
+  font-size: 1.5rem;
+  margin: 0 1rem 0 0;
+}
+
+.vertical-spacing {
+    padding: 2rem 0;
+}
+
+.sml-vertical-spacing {
+    padding: 1rem 0;
+}
+
+.showcase-link-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 4rem;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.button-icon {
+    font-size: 1.25rem;
+    margin: 0 0 0 1rem;
+}
+
+.collection-content p {
+    font-family: 'Rubik', sans-serif; 
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.collection-content h3 {
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5em; 
+    margin: 2rem 0 0.5rem 0;
+}
+
+.collection-content h4 {
+    font-size: 1.25rem;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5em;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.collection-content h5 {
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif; 
+    line-height: 1.5em;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.collection-content h6 {
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    color:hsla(0, 0%, 100%, 0.75);  
+    line-height: 1.5em; 
+    margin: 2rem 0 0.5rem 0;
 }

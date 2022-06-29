@@ -1,8 +1,8 @@
 <h2 class="subtitle">{{ post.title }}</h2>
 <p class="subsubtitle">{% for tag in post.tags %}{{ tag }} {% endfor %}</p>
 <p class="subsubtitle">{{ post.date  | date_to_string }}</p>
-<p class="body">{{ post.excerpt }}</p>
-<a href="{{ post.url }}">
-    <p class="button">Read more</p>
-    <img src="" alt="Arrow">
+<p class="body sml-vertical-spacing">{{ post.excerpt | strip_html | truncatewords: 25}}</p>
+<a href="{{ post.url }}" class="button">
+    <p class="typo-button">Read more</p>
+    <i class="button-icon fa fa-arrow-right"></i>
 </a>

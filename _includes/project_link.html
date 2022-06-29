@@ -1,9 +1,9 @@
-<img src="{{ project.thumbnail }}" alt="Project thumbnail" />
+<img src="{{ project.thumbnail }}" alt="Project thumbnail" class="thumbnail"/>
 <h2 class="subtitle">{{ project.title }}</h2>
 <p class="subsubtitle">{% for tag in project.tags %}{{ tag }} {% endfor %}</p>
 <p class="subsubtitle">{{ project.date  | date_to_string }}</p>
-<p class="body">{{ project.description }}</p>
-<a href="{{ project.url }}">
-    <p class="button">Learn more</p>
-    <img src="" alt="arrow">
+<p class="body sml-vertical-spacing">{{ project.description }}</p>
+<a href="{{ project.url }}" class="button">
+    <p class="typo-button">Learn more</p>
+    <i class="button-icon fa fa-arrow-right"></i>
 </a>

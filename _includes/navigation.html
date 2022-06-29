@@ -1,10 +1,10 @@
-<nav>
+<nav class="vertical-spacing">
     <h1 class="title">Nathan Shaheen</h1>
 
     <ul>
         {% for item in site.data.navigation %}
-        <li>
-            <a href="{{ item.link }}" class="body {% if page.url == item.link %}current{% endif %}">{{ item.name }}</a>
+        <li class="{{ item.alignment }}">
+            <a href="{{ item.link }}" class="{% if page.url == item.link %}link-current{% else %}link{% endif %}">{{ item.name }}</a>
         </li>
         {% endfor %}
     </ul>
