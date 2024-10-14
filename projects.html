@@ -6,6 +6,7 @@ title: Projects
 <ul>
     {% for project in site.projects %}
     <li>
+        <img src="{{ project.thumbnail }}" alt="Thumbnail" width="200px">
         <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
         {{ project.excerpt }}
     </li>
