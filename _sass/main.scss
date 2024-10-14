@@ -1,3 +1,67 @@
+$primary-color: #1C1C1E;
+$secondary-color: #F2F2F7;
+$accent-color: #0A84FF;
+
+$primary-font-family: "Inter", sans-serif;
+
+$title-font-size: 4rem;
+$heading-font-size: 3rem;
+$subheading-font-size: 2rem;
+$body-font-size: 1rem;
+$caption-font-size: 0.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $primary-font-family;
+  font-weight: normal;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: invert(87%) sepia(9%) saturate(1186%) hue-rotate(200deg) brightness(113%) contrast(93%);
+}
+
+.light-mode {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.light-mode button {
+  filter: invert(6%) sepia(5%) saturate(898%) hue-rotate(201deg) brightness(96%) contrast(88%);
+}
+
 .current {
-  color: green;
+  color: $accent-color;
+}
+
+.title {
+  font-size: $title-font-size;
+}
+
+.heading {
+  font-size: $heading-font-size;
+}
+
+.subheading {
+  font-size: $subheading-font-size;
+}
+
+.paragraph {
+  font-size: $body-font-size;
+}
+
+.caption {
+  font-size: $caption-font-size;
 }

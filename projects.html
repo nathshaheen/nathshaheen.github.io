@@ -1,13 +1,13 @@
 ---
 title: Projects
 ---
-<h1>Projects</h1>
+<h1 class="heading">Projects</h1>
 
 <ul>
     {% for project in site.projects %}
     <li>
         <img src="{{ project.thumbnail }}" alt="Thumbnail" width="200px">
-        <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+        <h2 class="subheading"><a href="{{ project.url }}">{{ project.title }}</a></h2>
         {{ project.excerpt }}
     </li>
     {% endfor %}

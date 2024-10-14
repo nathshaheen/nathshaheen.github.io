@@ -1,7 +1,13 @@
 <nav>
-  <h1>Headline</h1>
-  <button type="button">Mode</button>
+  <h1 class="title">Nathan</h1>
+  <button type="button" id="appearance-toggle">
+    <img src="/assets/images/icons/appearance-icon.svg"
+         alt="Appearance"
+         width="30px" height="30px"
+         onclick="document.body.classList.toggle('light-mode')"
+    >
+  </button>
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    <a class="body" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
   {% endfor %}
 </nav>
