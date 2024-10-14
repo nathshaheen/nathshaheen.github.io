@@ -1,13 +1,15 @@
 collections:
+  projects:
+    output: true
   authors:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "projects"
     values:
-      layout: "author"
+      layout: "project"
   - scope:
       path: ""
       type: "posts"
