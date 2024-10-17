@@ -5,10 +5,15 @@ $accent-color: #0A84FF;
 $primary-font-family: "Inter", sans-serif;
 
 $title-font-size: 4rem;
-$heading-font-size: 3rem;
-$subheading-font-size: 2rem;
+$heading-font-size: 2rem;
 $body-font-size: 1rem;
 $caption-font-size: 0.75rem;
+
+/*
+ *
+ *Reset
+ *
+ */
 
 * {
   margin: 0;
@@ -18,6 +23,20 @@ $caption-font-size: 0.75rem;
 ol, ul {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited:not(.current) {
+  color: inherit;
+}
+
+/*
+ *
+ * Dark/Light Mode
+ *
+ */
 
 body {
   background-color: $primary-color;
@@ -30,6 +49,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  // Invert SVG to Secondary colour
   filter: invert(87%) sepia(9%) saturate(1186%) hue-rotate(200deg) brightness(113%) contrast(93%);
 }
 
@@ -39,12 +59,22 @@ button {
 }
 
 .light-mode button {
+  // Invert SVG to Primary colour
   filter: invert(6%) sepia(5%) saturate(898%) hue-rotate(201deg) brightness(96%) contrast(88%);
+}
+
+.light-mode nav {
+  background-color: $secondary-color;
 }
 
 .current {
   color: $accent-color;
+  font-size: $body-font-size;
 }
+
+/*
+ * Typography
+ */
 
 .title {
   font-size: $title-font-size;
@@ -54,14 +84,69 @@ button {
   font-size: $heading-font-size;
 }
 
-.subheading {
-  font-size: $subheading-font-size;
-}
-
-.paragraph {
+.body {
   font-size: $body-font-size;
 }
 
 .caption {
   font-size: $caption-font-size;
+}
+
+/*
+ *
+ * Layout
+ *
+ */
+
+body {
+  position: fixed;
+}
+
+.center {
+  width: 60vw;
+  left: 20vw;
+}
+
+#appearance-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+nav {
+  //position: fixed;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background-color: $primary-color;
+  z-index: 1;
+  //top: 0;
+}
+
+nav ul {
+  display: flex;
+  margin-top: 2rem;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 4rem;
+}
+
+#about {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+#social-links {
+  display: flex;
+}
+
+#social-links li:not(:first-child) {
+  margin-left: 2rem;
+}
+
+#social-links li button img {
+  width: 2rem;
+  height: 2rem;
 }
