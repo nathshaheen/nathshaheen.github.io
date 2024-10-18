@@ -116,12 +116,10 @@ body {
 }
 
 nav {
-  //position: fixed;
   padding-top: 5rem;
   padding-bottom: 2rem;
   background-color: $primary-color;
   z-index: 1;
-  //top: 0;
 }
 
 nav ul {
@@ -142,11 +140,28 @@ nav ul li:not(:first-child) {
   display: flex;
 }
 
+#social-links li {
+  height: 2rem;
+}
+
 #social-links li:not(:first-child) {
   margin-left: 2rem;
 }
 
-#social-links li button img {
+#social-links li a button {
   width: 2rem;
   height: 2rem;
+  background-size: 100% 100%;
+}
+
+#email-icon {
+  background-image: url(/assets/images/icons/email-icon.svg);
+}
+
+#github-icon {
+  background-image: url(/assets/images/icons/github-icon.svg);
+}
+
+#linkedin-icon {
+  background-image: url(/assets/images/icons/linkedin-icon.svg);
 }
