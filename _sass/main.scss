@@ -1,5 +1,7 @@
-$primary-color: #1C1C1E;
-$secondary-color: #F2F2F7;
+$dark-primary-color: #1C1C1E;
+$dark-secondary-color: #2C2C2E;
+$light-primary-color: #F2F2F7;
+$light-secondary-color: #E5E5EA;
 $accent-color: #0A84FF;
 
 $primary-font-family: "Inter", sans-serif;
@@ -39,8 +41,8 @@ a:visited:not(.current) {
  */
 
 body {
-  background-color: $primary-color;
-  color: $secondary-color;
+  background-color: $dark-primary-color;
+  color: $light-primary-color;
   font-family: $primary-font-family;
   font-weight: normal;
 }
@@ -54,8 +56,8 @@ button {
 }
 
 .light-mode {
-  background-color: $secondary-color;
-  color: $primary-color;
+  background-color: $light-primary-color;
+  color: $dark-primary-color;
 }
 
 .light-mode button {
@@ -64,7 +66,11 @@ button {
 }
 
 .light-mode nav {
-  background-color: $secondary-color;
+  background-color: $light-primary-color;
+}
+
+.light-mode .card a {
+  background-color: $light-secondary-color;
 }
 
 .current {
@@ -107,18 +113,25 @@ body {
   left: 20vw;
 }
 
+.icon-button {
+  width: 2rem;
+  height: 2rem;
+  background-size: 100% 100%;
+}
+
 #appearance-toggle {
   position: fixed;
   top: 0;
   right: 0;
   margin-top: 1rem;
   margin-right: 1rem;
+  background-image: url(/assets/images/icons/appearance-icon.svg);
 }
 
 nav {
   padding-top: 5rem;
   padding-bottom: 2rem;
-  background-color: $primary-color;
+  background-color: $dark-primary-color;
   z-index: 1;
 }
 
@@ -148,12 +161,6 @@ nav ul li:not(:first-child) {
   margin-left: 2rem;
 }
 
-#social-links li a button {
-  width: 2rem;
-  height: 2rem;
-  background-size: 100% 100%;
-}
-
 #email-icon {
   background-image: url(/assets/images/icons/email-icon.svg);
 }
@@ -164,4 +171,29 @@ nav ul li:not(:first-child) {
 
 #linkedin-icon {
   background-image: url(/assets/images/icons/linkedin-icon.svg);
+}
+
+.card a {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  background-color: $dark-secondary-color;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.thumbnail {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-content .caption {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

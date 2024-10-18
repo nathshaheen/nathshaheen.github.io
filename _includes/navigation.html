@@ -1,14 +1,9 @@
 <nav>
-  <h1 class="title">Nathan Shaheen</h1>
-  <button type="button" id="appearance-toggle">
-    <img src="/assets/images/icons/appearance-icon.svg"
-         alt="Appearance"
-         width="30px" height="30px"
-    >
-  </button>
-  <ul>
-  {% for item in site.data.navigation %}
-    <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-  {% endfor %}
-  </ul>
+    <h1 class="title">Nathan Shaheen</h1>
+    <button type="button" id="appearance-toggle" class="icon-button"></button>
+    <ul>
+        {% for item in site.data.navigation %}
+        <li><a href="{{ item.link }}" {% if page.url== item.link %}class="current" {% endif %}>{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
 </nav>
