@@ -3,10 +3,14 @@ title: Projects
 ---
 <ul>
     {% for project in site.projects %}
-    <li>
-        <img src="{{ project.thumbnail }}" alt="Thumbnail" width="200px">
-        <h2 class="heading"><a href="{{ project.url }}">{{ project.title }}</a></h2>
-        {{ project.excerpt }}
+    <li class="card">
+        <a href="{{ project.url }}">
+            <img src="{{ project.thumbnail }}" alt="Thumbnail" class="thumbnail">
+            <div class="card-content">
+                <h2 class="heading">{{ project.title }}</h2>
+                {{ project.excerpt }}
+            </div>
+        </a>
     </li>
     {% endfor %}
 </ul>

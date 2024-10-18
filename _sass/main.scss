@@ -104,13 +104,13 @@ button {
  *
  */
 
-body {
-  position: fixed;
-}
+//body {
+//  position: fixed;
+//}
 
 .center {
   width: 60vw;
-  left: 20vw;
+  margin: auto;
 }
 
 .icon-button {
@@ -129,10 +129,14 @@ body {
 }
 
 nav {
-  padding-top: 5rem;
+  padding-top: 4.9375rem;
   padding-bottom: 2rem;
   background-color: $dark-primary-color;
   z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 20vw;
+  width: 60vw;
 }
 
 nav ul {
@@ -142,6 +146,11 @@ nav ul {
 
 nav ul li:not(:first-child) {
   margin-left: 4rem;
+}
+
+.content {
+  margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 
 #about {
@@ -175,7 +184,6 @@ nav ul li:not(:first-child) {
 
 .card a {
   margin-top: 1rem;
-  width: 100%;
   display: flex;
   background-color: $dark-secondary-color;
   padding: 1rem;
@@ -193,7 +201,10 @@ nav ul li:not(:first-child) {
   width: 100%;
 }
 
+.card-content .heading {
+  margin-bottom: 1rem;
+}
+
 .card-content .caption {
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
