@@ -201,10 +201,27 @@ nav ul li:not(:first-child) {
   width: 100%;
 }
 
-.card-content .heading {
+.card-content .heading,
+.post .heading,
+.project .heading {
   margin-bottom: 1rem;
 }
 
-.card-content .caption {
+.card-content .caption,
+.post .caption,
+.project .caption {
   margin-bottom: 1rem;
+}
+
+.post .thumbnail,
+.project .thumbnail {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post p,
+.project p {
+  margin-top: 1rem;
 }
