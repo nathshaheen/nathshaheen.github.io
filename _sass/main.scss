@@ -134,10 +134,7 @@ button {
 }
 
 .post blockquote {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
@@ -227,10 +224,6 @@ p:not(.caption), .post li {
  *
  */
 
-//body {
-//  position: fixed;
-//}
-
 .center {
   width: 60vw;
   margin: auto;
@@ -255,16 +248,25 @@ nav {
   padding-top: 4.9375rem;
   padding-bottom: 2rem;
   background-color: $dark-primary-color;
+  //background-color: red;
   z-index: 1;
   position: fixed;
   top: 0;
   left: 20vw;
   width: 60vw;
+  transition: padding-top 150ms, padding-bottom 150ms;
+}
+
+nav h1 {
+  transition: font-size 150ms;
+  //background-color: green;
 }
 
 nav ul {
   display: flex;
   margin-top: 2rem;
+  transition: margin-top 150ms;
+  //background-color: blue;
 }
 
 nav ul li:not(:first-child) {
