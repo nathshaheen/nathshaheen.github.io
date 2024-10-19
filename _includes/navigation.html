@@ -6,4 +6,5 @@
         <li><a href="{{ item.link }}" {% if page.url== item.link %}class="current" {% endif %}>{{ item.name }}</a></li>
         {% endfor %}
     </ul>
+    <button type="button" id="page-up" class="icon-button" onclick="document.documentElement.scrollTop = 0;"></button>
 </nav>

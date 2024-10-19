@@ -244,6 +244,15 @@ p:not(.caption), .post li {
   background-image: url(/assets/images/icons/appearance-icon.svg);
 }
 
+#page-up {
+  position: fixed;
+  bottom: 0;
+  right: 20vw;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  background-image: url(/assets/images/icons/page-up-icon.svg);
+}
+
 nav {
   padding-top: 4.9375rem;
   padding-bottom: 2rem;
