@@ -1,7 +1,11 @@
 $dark-primary-color: #1C1C1E;
 $dark-secondary-color: #2C2C2E;
+$dark-tertiary-color: #3A3A3C;
+$dark-quaternary-color: #48484A;
 $light-primary-color: #F2F2F7;
 $light-secondary-color: #E5E5EA;
+$light-tertiary-color: #D1D1D6;
+$light-quaternary-color: #C7C7CC;
 $accent-color: #0A84FF;
 
 $primary-font-family: "Inter", sans-serif;
@@ -30,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-a:visited:not(.current) {
+nav ul li a:visited:not(.current) {
   color: inherit;
 }
 
@@ -71,6 +75,31 @@ button {
 
 .light-mode .card a {
   background-color: $light-secondary-color;
+  color: $dark-primary-color;
+}
+
+.light-mode .post > blockquote {
+  background-color: $light-secondary-color;
+}
+
+.light-mode .post > blockquote > blockquote {
+  background-color: $light-tertiary-color;
+}
+
+.light-mode .post > blockquote > blockquote > blockquote{
+  background-color: $light-quaternary-color;
+}
+
+.light-mode .post code {
+  background-color: $light-secondary-color;
+}
+
+.light-mode .post pre {
+  background-color: $light-secondary-color;
+}
+
+.light-mode .post hr {
+  border: 1px solid $dark-primary-color;
 }
 
 .current {
@@ -96,6 +125,100 @@ button {
 
 .caption {
   font-size: $caption-font-size;
+}
+
+// Post
+
+.post h2, .post h3, .post h4 {
+  margin-top: 3rem;
+}
+
+.post blockquote {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.post > blockquote {
+  background-color: $dark-secondary-color;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post > blockquote > blockquote {
+  background-color: $dark-tertiary-color;
+}
+
+.post > blockquote > blockquote > blockquote {
+  background-color: $dark-quaternary-color;
+}
+
+.post ol, .post ul {
+  margin-left: 1rem;
+}
+
+.post > ol, .post > ul {
+  padding-left: 1rem;
+}
+
+.post > ol {
+  list-style: decimal;
+}
+
+.post ol > li > ol {
+  list-style: lower-alpha;
+}
+
+.post ol > li > ol > li > ol {
+  list-style: lower-roman;
+}
+
+.post ul {
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.post > ol, .post > ul {
+  margin-top: 1rem;
+}
+
+.post hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: 1px solid $light-secondary-color;
+}
+
+.post a {
+  color: $accent-color;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.post code {
+  background-color: $dark-secondary-color;
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.post pre {
+  background-color: $dark-secondary-color;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom:2rem;
+}
+
+p:not(.caption), .post li {
+  line-height: 1.5rem;
 }
 
 /*
@@ -188,6 +311,7 @@ nav ul li:not(:first-child) {
   background-color: $dark-secondary-color;
   padding: 1rem;
   border-radius: 0.5rem;
+  color: $light-primary-color;
 }
 
 .thumbnail {
@@ -202,26 +326,23 @@ nav ul li:not(:first-child) {
 }
 
 .card-content .heading,
-.post .heading,
-.project .heading {
+.post .heading {
   margin-bottom: 1rem;
 }
 
 .card-content .caption,
-.post .caption,
-.project .caption {
+.post .caption {
   margin-bottom: 1rem;
 }
 
-.post .thumbnail,
-.project .thumbnail {
+.post .thumbnail {
   width: 100%;
   height: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.post p,
-.project p {
+.post p:not(.post blockquote p, .caption) {
   margin-top: 1rem;
 }
+
