@@ -26,3 +26,21 @@ function changeCss () {
     this.scrollY > 100 ? navUlElement.style.marginTop = "1rem" : navUlElement.style.marginTop = "2rem";
 }
 window.addEventListener("scroll", changeCss , false);
+
+let pageUpButton = document.getElementById("page-up");
+
+window.onscroll = function() { scroll() };
+
+function scroll() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        pageUpButton.style.display = "block";
+    } else {
+        pageUpButton.style.display = "none";
+    }
+}
+
+function pageUp() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
+}

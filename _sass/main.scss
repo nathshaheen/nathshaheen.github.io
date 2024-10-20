@@ -55,18 +55,11 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  // Invert SVG to Secondary colour
-  filter: invert(87%) sepia(9%) saturate(1186%) hue-rotate(200deg) brightness(113%) contrast(93%);
 }
 
 .light-mode {
   background-color: $light-primary-color;
   color: $dark-primary-color;
-}
-
-.light-mode button {
-  // Invert SVG to Primary colour
-  filter: invert(6%) sepia(5%) saturate(898%) hue-rotate(201deg) brightness(96%) contrast(88%);
 }
 
 .light-mode nav {
@@ -230,8 +223,8 @@ p:not(.caption), .post li {
 }
 
 .icon-button {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-size: 100% 100%;
 }
 
@@ -241,23 +234,31 @@ p:not(.caption), .post li {
   right: 0;
   margin-top: 1rem;
   margin-right: 1rem;
-  background-image: url(/assets/images/icons/appearance-icon.svg);
+  background-image: url(/assets/images/icons/dark-appearance-icon.svg);
+}
+
+.light-mode #appearance-toggle {
+  background-image: url(/assets/images/icons/light-appearance-icon.svg);
 }
 
 #page-up {
+  display: none;
   position: fixed;
   bottom: 0;
   right: 20vw;
   margin-bottom: 1rem;
   margin-right: 1rem;
-  background-image: url(/assets/images/icons/page-up-icon.svg);
+  background-image: url(/assets/images/icons/dark-page-up-icon.svg);
+}
+
+.light-mode #page-up {
+  background-image: url(/assets/images/icons/light-page-up-icon.svg);
 }
 
 nav {
   padding-top: 4.9375rem;
   padding-bottom: 2rem;
   background-color: $dark-primary-color;
-  //background-color: red;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -268,7 +269,6 @@ nav {
 
 nav h1 {
   transition: font-size 150ms;
-  //background-color: green;
 }
 
 nav ul {
@@ -305,15 +305,27 @@ nav ul li:not(:first-child) {
 }
 
 #email-icon {
-  background-image: url(/assets/images/icons/email-icon.svg);
+  background-image: url(/assets/images/icons/dark-email-icon.svg);
+}
+
+.light-mode #email-icon {
+  background-image: url(/assets/images/icons/light-email-icon.svg);
 }
 
 #github-icon {
-  background-image: url(/assets/images/icons/github-icon.svg);
+  background-image: url(/assets/images/icons/dark-github-icon.svg);
+}
+
+.light-mode #github-icon {
+  background-image: url(/assets/images/icons/light-github-icon.svg);
 }
 
 #linkedin-icon {
-  background-image: url(/assets/images/icons/linkedin-icon.svg);
+  background-image: url(/assets/images/icons/dark-linkedin-icon.svg);
+}
+
+.light-mode #linkedin-icon {
+  background-image: url(/assets/images/icons/light-linkedin-icon.svg);
 }
 
 .card a {
