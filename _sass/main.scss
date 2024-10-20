@@ -49,6 +49,7 @@ body {
   color: $light-primary-color;
   font-family: $primary-font-family;
   font-weight: normal;
+  transition: background-color 400ms, color 400ms;
 }
 
 button {
@@ -130,6 +131,7 @@ button {
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+  transition: background-color 400ms;
 }
 
 .post > blockquote {
@@ -179,6 +181,7 @@ button {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: 1px solid $light-secondary-color;
+  transition: border 400ms;
 }
 
 .post a {
@@ -197,6 +200,7 @@ button {
   background-color: $dark-secondary-color;
   padding: 0.1rem 0.25rem;
   border-radius: 0.25rem;
+  transition: background-color 400ms;
 }
 
 .post pre {
@@ -205,6 +209,7 @@ button {
   border-radius: 0.5rem;
   margin-top: 2rem;
   margin-bottom:2rem;
+  transition: background-color 400ms;
 }
 
 p:not(.caption), .post li {
@@ -264,7 +269,7 @@ nav {
   top: 0;
   left: 20vw;
   width: 60vw;
-  transition: padding-top 150ms, padding-bottom 150ms;
+  transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
 }
 
 nav h1 {
@@ -335,6 +340,7 @@ nav ul li:not(:first-child) {
   padding: 1rem;
   border-radius: 0.5rem;
   color: $light-primary-color;
+  transition: background-color 400ms, color 400ms;
 }
 
 .thumbnail {
