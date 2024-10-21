@@ -34,71 +34,14 @@ a {
   text-decoration: none;
 }
 
-nav ul li a:visited:not(.current) {
-  color: inherit;
-}
-
-/*
- *
- * Dark/Light Mode
- *
- */
-
-body {
-  background-color: $dark-primary-color;
-  color: $light-primary-color;
-  font-family: $primary-font-family;
-  font-weight: normal;
-  transition: background-color 400ms, color 400ms;
-}
-
 button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.light-mode {
-  background-color: $light-primary-color;
-  color: $dark-primary-color;
-}
-
-.light-mode nav {
-  background-color: $light-primary-color;
-}
-
-.light-mode .card a {
-  background-color: $light-secondary-color;
-  color: $dark-primary-color;
-}
-
-.light-mode .post > blockquote {
-  background-color: $light-secondary-color;
-}
-
-.light-mode .post > blockquote > blockquote {
-  background-color: $light-tertiary-color;
-}
-
-.light-mode .post > blockquote > blockquote > blockquote{
-  background-color: $light-quaternary-color;
-}
-
-.light-mode .post code {
-  background-color: $light-secondary-color;
-}
-
-.light-mode .post pre {
-  background-color: $light-secondary-color;
-}
-
-.light-mode .post hr {
-  border: 1px solid $dark-primary-color;
-}
-
-.current {
-  color: $accent-color;
-  font-size: $body-font-size;
+nav ul li a:visited:not(.current) {
+  color: inherit;
 }
 
 /*
@@ -121,7 +64,187 @@ button {
   font-size: $caption-font-size;
 }
 
-// Post
+p:not(.caption), .post li {
+  line-height: 1.5rem;
+}
+
+/*
+ * General
+ */
+
+body {
+  background-color: $dark-primary-color;
+  color: $light-primary-color;
+  font-family: $primary-font-family;
+  font-weight: normal;
+  transition: background-color 400ms, color 400ms;
+  width: 60vw;
+  margin: auto;
+}
+
+.light-mode {
+  background-color: $light-primary-color;
+  color: $dark-primary-color;
+}
+
+.icon-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 100% 100%;
+}
+
+#main-content {
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+/*
+ * Navigation Bar
+ */
+
+nav {
+  padding-top: 4.9375rem;
+  padding-bottom: 2rem;
+  background-color: $dark-primary-color;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 20vw;
+  width: 60vw;
+  transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
+}
+
+.light-mode nav {
+  background-color: $light-primary-color;
+}
+
+nav h1 {
+  transition: font-size 150ms;
+}
+
+nav ul {
+  display: flex;
+  margin-top: 2rem;
+  transition: margin-top 150ms;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 4rem;
+}
+
+.current {
+  color: $accent-color;
+}
+
+#appearance-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  background-image: url(/assets/images/icons/dark-appearance-icon.svg);
+}
+
+.light-mode #appearance-toggle {
+  background-image: url(/assets/images/icons/light-appearance-icon.svg);
+}
+
+#page-up {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 20vw;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  background-image: url(/assets/images/icons/dark-page-up-icon.svg);
+}
+
+.light-mode #page-up {
+  background-image: url(/assets/images/icons/light-page-up-icon.svg);
+}
+
+/*
+ * About
+ */
+
+#social-links {
+  margin-top: 4rem;
+  display: flex;
+}
+
+#social-links li {
+  height: 1.5rem;
+}
+
+#social-links li:not(:first-child) {
+  margin-left: 2rem;
+}
+
+#email-icon {
+  background-image: url(/assets/images/icons/dark-email-icon.svg);
+}
+
+.light-mode #email-icon {
+  background-image: url(/assets/images/icons/light-email-icon.svg);
+}
+
+#github-icon {
+  background-image: url(/assets/images/icons/dark-github-icon.svg);
+}
+
+.light-mode #github-icon {
+  background-image: url(/assets/images/icons/light-github-icon.svg);
+}
+
+#linkedin-icon {
+  background-image: url(/assets/images/icons/dark-linkedin-icon.svg);
+}
+
+.light-mode #linkedin-icon {
+  background-image: url(/assets/images/icons/light-linkedin-icon.svg);
+}
+
+/*
+ * Card
+ */
+
+.card a {
+  margin-top: 1rem;
+  display: flex;
+  background-color: $dark-secondary-color;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: $light-primary-color;
+  transition: background-color 400ms, color 400ms;
+}
+
+.light-mode .card a {
+  background-color: $light-secondary-color;
+  color: $dark-primary-color;
+}
+
+.thumbnail {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-content .heading {
+  margin-bottom: 1rem;
+}
+
+.card-content .caption {
+  margin-bottom: 1rem;
+}
+
+/*
+ * Post
+ */
 
 .post h2, .post h3, .post h4 {
   margin-top: 3rem;
@@ -140,12 +263,24 @@ button {
   margin-bottom: 2rem;
 }
 
+.light-mode .post > blockquote {
+  background-color: $light-secondary-color;
+}
+
 .post > blockquote > blockquote {
   background-color: $dark-tertiary-color;
 }
 
+.light-mode .post > blockquote > blockquote {
+  background-color: $light-tertiary-color;
+}
+
 .post > blockquote > blockquote > blockquote {
   background-color: $dark-quaternary-color;
+}
+
+.light-mode .post > blockquote > blockquote > blockquote{
+  background-color: $light-quaternary-color;
 }
 
 .post ol, .post ul {
@@ -184,6 +319,10 @@ button {
   transition: border 400ms;
 }
 
+.light-mode .post hr {
+  border: 1px solid $dark-primary-color;
+}
+
 .post a {
   color: $accent-color;
 }
@@ -191,7 +330,7 @@ button {
 .post img {
   width: 100%;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
@@ -203,6 +342,10 @@ button {
   transition: background-color 400ms;
 }
 
+.light-mode .post code {
+  background-color: $light-secondary-color;
+}
+
 .post pre {
   background-color: $dark-secondary-color;
   padding: 1rem;
@@ -212,166 +355,10 @@ button {
   transition: background-color 400ms;
 }
 
-p:not(.caption), .post li {
-  line-height: 1.5rem;
+.light-mode .post pre {
+  background-color: $light-secondary-color;
 }
 
-/*
- *
- * Layout
- *
- */
-
-.center {
-  width: 60vw;
-  margin: auto;
-}
-
-.icon-button {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-size: 100% 100%;
-}
-
-#appearance-toggle {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  background-image: url(/assets/images/icons/dark-appearance-icon.svg);
-}
-
-.light-mode #appearance-toggle {
-  background-image: url(/assets/images/icons/light-appearance-icon.svg);
-}
-
-#page-up {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 20vw;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  background-image: url(/assets/images/icons/dark-page-up-icon.svg);
-}
-
-.light-mode #page-up {
-  background-image: url(/assets/images/icons/light-page-up-icon.svg);
-}
-
-nav {
-  padding-top: 4.9375rem;
-  padding-bottom: 2rem;
-  background-color: $dark-primary-color;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 20vw;
-  width: 60vw;
-  transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
-}
-
-nav h1 {
-  transition: font-size 150ms;
-}
-
-nav ul {
-  display: flex;
-  margin-top: 2rem;
-  transition: margin-top 150ms;
-  //background-color: blue;
-}
-
-nav ul li:not(:first-child) {
-  margin-left: 4rem;
-}
-
-.content {
-  margin-top: 15rem;
-  margin-bottom: 5rem;
-}
-
-#about {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-#social-links {
-  display: flex;
-}
-
-#social-links li {
-  height: 2rem;
-}
-
-#social-links li:not(:first-child) {
-  margin-left: 2rem;
-}
-
-#email-icon {
-  background-image: url(/assets/images/icons/dark-email-icon.svg);
-}
-
-.light-mode #email-icon {
-  background-image: url(/assets/images/icons/light-email-icon.svg);
-}
-
-#github-icon {
-  background-image: url(/assets/images/icons/dark-github-icon.svg);
-}
-
-.light-mode #github-icon {
-  background-image: url(/assets/images/icons/light-github-icon.svg);
-}
-
-#linkedin-icon {
-  background-image: url(/assets/images/icons/dark-linkedin-icon.svg);
-}
-
-.light-mode #linkedin-icon {
-  background-image: url(/assets/images/icons/light-linkedin-icon.svg);
-}
-
-.card a {
-  margin-top: 1rem;
-  display: flex;
-  background-color: $dark-secondary-color;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: $light-primary-color;
-  transition: background-color 400ms, color 400ms;
-}
-
-.thumbnail {
-  width: 14rem;
-  height: 14rem;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
-}
-
-.card-content {
-  width: 100%;
-}
-
-.card-content .heading,
-.post .heading {
-  margin-bottom: 1rem;
-}
-
-.card-content .caption,
-.post .caption {
-  margin-bottom: 1rem;
-}
-
-.post .thumbnail {
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.post p:not(.post blockquote p, .caption) {
+.post p:not(.post blockquote p) {
   margin-top: 1rem;
 }
-
