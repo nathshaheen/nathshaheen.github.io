@@ -1,37 +1,54 @@
-const toggleButton = document.getElementById('appearance-toggle');
+/*
+ * Dark/Light mode
+ */
 
-if (localStorage.getItem('theme') === 'light') {
+const enableLightMode = () => {
     document.body.classList.add('light-mode');
+    localStorage.setItem('lightMode', 'enabled');
 }
 
-toggleButton.addEventListener('click', function () {
-    document.body.classList.toggle('light-mode');
+const disableLightMode = () => {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('lightMode', null);
+}
 
-    if (document.body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
+let lightMode = localStorage.getItem("lightMode");
+if (lightMode === 'enabled') {
+    enableLightMode();
+}
+
+const lightModeToggle = document.getElementById('appearance-toggle');
+lightModeToggle.addEventListener('click', () => {
+    lightMode = localStorage.getItem("lightMode");
+    if (lightMode !== 'enabled') {
+        enableLightMode();
     } else {
-        localStorage.setItem('theme', 'dark');
+        disableLightMode();
     }
 });
 
-function changeCss () {
-    var navElement = document.querySelector("nav");
-    this.scrollY > 100 ? navElement.style.paddingTop = "1.875rem" : navElement.style.paddingTop = "4.9375rem";
-    this.scrollY > 100 ? navElement.style.paddingBottom = "1rem" : navElement.style.paddingBottom = "2rem";
+/*
+ * Minimal navigation bar on scroll
+ */
 
-    var navH1Element = document.querySelector("nav h1");
-    this.scrollY > 100 ? navH1Element.style.fontSize = "2rem" : navH1Element.style.fontSize = "4rem";
+window.addEventListener("scroll", () => {
+    const navBar = document.querySelector("nav");
+    this.scrollY > 100 ? navBar.style.paddingTop = "1.875rem" : navBar.style.paddingTop = "4.9375rem";
+    this.scrollY > 100 ? navBar.style.paddingBottom = "1rem" : navBar.style.paddingBottom = "2rem";
 
-    var navUlElement = document.querySelector("nav ul");
-    this.scrollY > 100 ? navUlElement.style.marginTop = "1rem" : navUlElement.style.marginTop = "2rem";
-}
-window.addEventListener("scroll", changeCss , false);
+    const navH1 = document.querySelector("nav h1");
+    this.scrollY > 100 ? navH1.style.fontSize = "2rem" : navH1.style.fontSize = "4rem";
 
-let pageUpButton = document.getElementById("page-up");
+    var navUl = document.querySelector("nav ul");
+    this.scrollY > 100 ? navUl.style.marginTop = "1rem" : navUl.style.marginTop = "2rem";
+});
 
-window.onscroll = function() { scroll() };
+/*
+ * Page up button
+ */
 
-function scroll() {
+const pageUpButton = document.getElementById("page-up");
+window.onscroll = () => {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         pageUpButton.style.display = "block";
     } else {
@@ -39,8 +56,6 @@ function scroll() {
     }
 }
 
-function pageUp() {
+const pageUp = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // document.body.scrollTop = 0;
-    // document.documentElement.scrollTop = 0;
 }
