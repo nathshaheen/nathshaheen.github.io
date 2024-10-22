@@ -221,6 +221,7 @@ nav ul li:not(:first-child) {
 .light-mode .card a {
   background-color: $light-secondary-color;
   color: $dark-primary-color;
+
 }
 
 .thumbnail {
@@ -232,6 +233,7 @@ nav ul li:not(:first-child) {
 
 .card-content {
   width: 100%;
+  max-width: calc(60vw - 16rem);
 }
 
 .card-content .heading {

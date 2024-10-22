@@ -3,6 +3,8 @@ thumbnail: /assets/images/placeholder-image2.png
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a vestibulum dui, laoreet faucibus ex. Donec efficitur,
 elit at molestie accumsan, velit sapien sagittis diam, in elementum tortor tellus sollicitudin neque. Suspendisse
+potenti. Ut non turpis nec sem ullamcorper fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a vestibulum dui, laoreet faucibus ex. Donec efficitur,
+elit at molestie accumsan, velit sapien sagittis diam, in elementum tortor tellus sollicitudin neque. Suspendisse
 potenti. Ut non turpis nec sem ullamcorper fringilla.
 
 Curabitur ipsum diam, bibendum id nisi vitae, facilisis vehicula

@@ -8,7 +8,7 @@ title: Projects
             <img src="{{ project.thumbnail }}" alt="Thumbnail" class="thumbnail">
             <div class="card-content">
                 <h2 class="heading">{{ project.title }}</h2>
-                {{ project.excerpt }}
+                {{ project.excerpt | truncatewords: 60 }}
             </div>
         </a>
     </li>
