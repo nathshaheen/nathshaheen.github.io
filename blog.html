@@ -9,7 +9,7 @@ title: Blog
             <div class="card-content">
                 <h2 class="heading">{{ post.title }}</h2>
                 <p class="caption">{{ post.date | date_to_string }}</p>
-                {{ post.excerpt | truncatewords: 50 }}
+                {{ post.excerpt | truncatewords: 40 }}
             </div>
         </a>
     </li>

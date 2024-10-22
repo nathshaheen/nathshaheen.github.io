@@ -78,7 +78,7 @@ body {
   font-family: $primary-font-family;
   font-weight: normal;
   transition: background-color 400ms, color 400ms;
-  width: 60vw;
+  width: 48rem;
   margin: auto;
 }
 
@@ -109,8 +109,7 @@ nav {
   z-index: 1;
   position: fixed;
   top: 0;
-  left: 20vw;
-  width: 60vw;
+  width: 48rem;
   transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
 }
 
@@ -363,4 +362,14 @@ nav ul li:not(:first-child) {
 
 .post p:not(.post blockquote p) {
   margin-top: 1rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    width: 28rem;
+  }
+
+  nav {
+    width: 28rem;
+  }
 }
