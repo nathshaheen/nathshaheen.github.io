@@ -40,6 +40,10 @@ button {
   cursor: pointer;
 }
 
+nav ul li a {
+  font-size: 1.2rem;
+}
+
 nav ul li a:visited:not(.current) {
   color: inherit;
 }
@@ -94,7 +98,7 @@ body {
 }
 
 #main-content {
-  margin-top: 15rem;
+  margin-top: 16rem;
   margin-bottom: 5rem;
 }
 
@@ -109,7 +113,7 @@ nav {
   top: 0;
   left: 0;
   width: 48rem;
-  padding: 4.9375rem calc((100vw - 48rem) / 2) 2rem calc((100vw - 48rem) / 2);
+  padding: 3.71875rem calc((100vw - 48rem) / 2) 4rem calc((100vw - 48rem) / 2);
   transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
 }
 
@@ -374,22 +378,32 @@ nav ul li:not(:first-child) {
 
   nav {
     width: 32rem;
+    padding-top: 3.3541666667rem;
     padding-left: calc((100vw - 32rem) / 2);
     padding-right: calc((100vw - 32rem) / 2);
   }
 
+  .icon-button {
+    width: 2rem;
+    height: 2rem;
+  }
+
   #appearance-toggle {
-    margin-top: 3rem;
-    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
   }
 
   #page-up {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: 3rem;
-    margin-bottom: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
 
+  nav ul li a {
+    font-size: 1.5rem;
+    transition: font-size 150ms;
   }
 
   .card a {
