@@ -103,13 +103,13 @@ body {
  */
 
 nav {
-  padding-top: 4.9375rem;
-  padding-bottom: 2rem;
   background-color: $dark-primary-color;
   z-index: 1;
   position: fixed;
   top: 0;
+  left: 0;
   width: 48rem;
+  padding: 4.9375rem calc((100vw - 48rem) / 2) 2rem calc((100vw - 48rem) / 2);
   transition: padding-top 150ms, padding-bottom 150ms, background-color 400ms;;
 }
 
@@ -232,7 +232,6 @@ nav ul li:not(:first-child) {
 
 .card-content {
   width: 100%;
-  max-width: calc(60vw - 16rem);
 }
 
 .card-content .heading {
@@ -375,5 +374,36 @@ nav ul li:not(:first-child) {
 
   nav {
     width: 32rem;
+    padding-left: calc((100vw - 32rem) / 2);
+    padding-right: calc((100vw - 32rem) / 2);
   }
+
+  #appearance-toggle {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+
+  #page-up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+  }
+
+  .card a {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+
 }
