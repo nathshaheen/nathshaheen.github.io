@@ -156,7 +156,7 @@ nav ul li:not(:first-child) {
   display: none;
   position: fixed;
   bottom: 0;
-  right: 20vw;
+  right: calc((100vw - 48rem) / 2);;
   margin-bottom: 1rem;
   margin-right: 1rem;
   background-image: url(/assets/images/icons/dark-page-up-icon.svg);
