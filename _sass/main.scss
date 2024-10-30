@@ -35,17 +35,9 @@ button {
   cursor: pointer;
 }
 
-nav ul li a:visited:not(.current) {
-  color: inherit;
-}
-
 /*
  * TYPOGRAPHY
  */
-
-html {
-  font-size: 16px;
-}
 
 .title {
   font-size: 3rem;
@@ -64,24 +56,28 @@ html {
 }
 
 nav ul li a {
+  color: $light-primary-color;
   display: inline-block;
   font-size: 1rem;
   line-height: 1em;
-  color: $light-primary-color;
 }
 
 /*
  * GENERAL
  */
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: $dark-primary-color;
   color: $light-primary-color;
   font-family: $primary-font-family;
   font-weight: normal;
-  width: 48rem;
   margin: auto;
   transition: background-color 400ms, color 400ms;
+  width: 48rem;
 }
 
 .light-mode {
@@ -90,29 +86,27 @@ body {
 }
 
 .icon-button {
-  width: $icon-button-size;
-  height: $icon-button-size;
   background-size: 100% 100%;
+  height: $icon-button-size;
+  width: $icon-button-size;
 }
 
 #main-content {
-  margin-top: 16rem;
   margin-bottom: 4rem;
+  margin-top: 16rem;
 }
 
-/*
- * NAVIGATION BAR
- */
+/* NAVIGATION BAR */
 
 nav {
   background-color: $dark-primary-color;
-  z-index: 1;
+  left: 0;
+  padding: 6rem calc((100vw - 48rem) / 2) 4rem calc((100vw - 48rem) / 2);
   position: fixed;
   top: 0;
-  left: 0;
-  width: 48rem;
-  padding: 6rem calc((100vw - 48rem) / 2) 4rem calc((100vw - 48rem) / 2);
   transition: padding-top 400ms, padding-bottom 400ms, background-color 400ms;
+  width: 48rem;
+  z-index: 1;
 }
 
 .light-mode nav {
@@ -133,17 +127,21 @@ nav ul li:not(:first-child) {
   margin-left: 4rem;
 }
 
+nav ul li a:visited:not(.current) {
+  color: inherit;
+}
+
 .current {
   color: $accent-color;
 }
 
 #appearance-toggle {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 1rem;
-  margin-right: 1rem;
   background-image: url(/assets/images/icons/dark-appearance-icon.svg);
+  margin-right: 1rem;
+  margin-top: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 .light-mode #appearance-toggle {
@@ -151,13 +149,13 @@ nav ul li:not(:first-child) {
 }
 
 #page-up {
-  display: none;
-  position: fixed;
+  background-image: url(/assets/images/icons/dark-page-up-icon.svg);
   bottom: 0;
-  right: calc((100vw - 48rem) / 2);
+  display: none;
   margin-bottom: 1rem;
   margin-right: 1rem;
-  background-image: url(/assets/images/icons/dark-page-up-icon.svg);
+  position: fixed;
+  right: calc((100vw - 48rem) / 2);
 }
 
 .light-mode #page-up {
@@ -165,12 +163,12 @@ nav ul li:not(:first-child) {
 }
 
 /*
- * ABOUT
+ * ABOUT PAGE
  */
 
 #social-links {
-  margin-top: 4rem;
   display: flex;
+  margin-top: 4rem;
 }
 
 #social-links li {
@@ -215,11 +213,11 @@ nav ul li:not(:first-child) {
 }
 
 .card a {
-  display: flex;
   background-color: $dark-secondary-color;
-  padding: 1rem;
   border-radius: 0.5rem;
   color: $light-primary-color;
+  display: flex;
+  padding: 1rem;
   transition: background-color 400ms, color 400ms;
 }
 
@@ -229,10 +227,10 @@ nav ul li:not(:first-child) {
 }
 
 .thumbnail {
-  width: 14rem;
-  height: 14rem;
   border-radius: 0.5rem;
+  height: 14rem;
   margin-right: 1rem;
+  width: 14rem;
 }
 
 .card-content .heading {
@@ -244,7 +242,7 @@ nav ul li:not(:first-child) {
 }
 
 /*
- * POST
+ * POST PAGE
  */
 
 #thumbnail-container {
@@ -259,37 +257,12 @@ nav ul li:not(:first-child) {
   margin-top: 3rem;
 }
 
-.post blockquote {
-  padding: 1rem;
-  border-radius: 0.5rem;
+.post p:not(.post blockquote p) {
   margin-top: 1rem;
-  transition: background-color 400ms;
 }
 
-.post > blockquote {
-  background-color: $dark-secondary-color;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.light-mode .post > blockquote {
-  background-color: $light-secondary-color;
-}
-
-.post > blockquote > blockquote {
-  background-color: $dark-tertiary-color;
-}
-
-.light-mode .post > blockquote > blockquote {
-  background-color: $light-tertiary-color;
-}
-
-.post > blockquote > blockquote > blockquote {
-  background-color: $dark-quaternary-color;
-}
-
-.light-mode .post > blockquote > blockquote > blockquote{
-  background-color: $light-quaternary-color;
+.post a {
+  color: $accent-color;
 }
 
 .post ol, .post ul {
@@ -320,10 +293,55 @@ nav ul li:not(:first-child) {
   margin-top: 1rem;
 }
 
+.post img {
+  border-radius: 0.5rem;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.post p:has(img) {
+  text-align: center;
+}
+
+.post blockquote {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  transition: background-color 400ms;
+}
+
+.post > blockquote {
+  background-color: $dark-secondary-color;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.light-mode .post > blockquote {
+  background-color: $light-secondary-color;
+}
+
+.post > blockquote > blockquote {
+  background-color: $dark-tertiary-color;
+}
+
+.light-mode .post > blockquote > blockquote {
+  background-color: $light-tertiary-color;
+}
+
+.post > blockquote > blockquote > blockquote {
+  background-color: $dark-quaternary-color;
+}
+
+.light-mode .post > blockquote > blockquote > blockquote{
+  background-color: $light-quaternary-color;
+}
+
 .post hr {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   border: 1px solid $light-primary-color;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   transition: border 400ms;
 }
 
@@ -331,26 +349,10 @@ nav ul li:not(:first-child) {
   border: 1px solid $dark-primary-color;
 }
 
-.post a {
-  color: $accent-color;
-}
-
-.post img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.post p:has(img) {
-  text-align: center;
-}
-
 .post code {
   background-color: $dark-secondary-color;
-  padding: 0.1rem 0.25rem;
   border-radius: 0.25rem;
+  padding: 0.1rem 0.25rem;
   transition: background-color 400ms;
 }
 
@@ -360,10 +362,10 @@ nav ul li:not(:first-child) {
 
 .post pre {
   background-color: $dark-secondary-color;
-  padding: 1rem;
   border-radius: 0.5rem;
-  margin-top: 2rem;
   margin-bottom:2rem;
+  margin-top: 2rem;
+  padding: 1rem;
   transition: background-color 400ms;
 }
 
@@ -371,10 +373,9 @@ nav ul li:not(:first-child) {
   background-color: $light-secondary-color;
 }
 
-.post p:not(.post blockquote p) {
-  margin-top: 1rem;
-}
-
+/*
+ * PORTRAIT VIEW
+ */
 @media (orientation: portrait) {
   html {
     font-size: 32px;
@@ -391,8 +392,8 @@ nav ul li:not(:first-child) {
   }
 
   #page-up {
-    position: fixed;
     bottom: 0;
+    position: fixed;
     right: 0;
   }
 
@@ -401,8 +402,8 @@ nav ul li:not(:first-child) {
   }
 
   .thumbnail {
-    width: 22rem;
-    height: 22rem;
     margin-bottom: 1rem;
+    height: 22rem;
+    width: 22rem;
   }
 }
