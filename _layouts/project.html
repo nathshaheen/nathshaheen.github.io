@@ -3,6 +3,8 @@ layout: default
 ---
 <div class="post">
     <h1 class="heading">{{ page.title }}</h1>
-    <img src="{{ page.thumbnail }}" alt="Thumbnail">
+    <div id="thumbnail-container">
+        <img src="{{ page.thumbnail }}" alt="Thumbnail">
+    </div>
     {{ content }}
 </div>

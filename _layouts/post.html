@@ -4,6 +4,8 @@ layout: default
 <div class="post">
     <h1 class="heading">{{ page.title }}</h1>
     <p class="caption">{{ page.date | date_to_string }}</p>
-    <img src="{{ page.thumbnail }}" alt="Thumbnail">
+    <div id="thumbnail-container">
+        <img src="{{ page.thumbnail }}" alt="Thumbnail">
+    </div>
     {{ content }}
 </div>
