@@ -12,44 +12,29 @@ const disableLightMode = () => {
     localStorage.setItem('lightMode', null);
 }
 
-let lightMode = localStorage.getItem("lightMode");
-if (lightMode === 'enabled') {
+if (localStorage.getItem("lightMode") === 'enabled') {
     enableLightMode();
 }
 
 const lightModeToggle = document.getElementById('appearance-toggle');
 lightModeToggle.addEventListener('click', () => {
-    lightMode = localStorage.getItem("lightMode");
-    if (lightMode !== 'enabled') {
-        enableLightMode();
-    } else {
-        disableLightMode();
-    }
+    localStorage.getItem("lightMode") !== 'enabled' ? enableLightMode() : disableLightMode();
 });
 
 /*
  * Minimal navigation bar on scroll
  */
-
+const navBar = document.querySelector("nav");
+const navH1 = document.querySelector("nav h1");
+const navUl = document.querySelector("nav ul");
 window.addEventListener("scroll", () => {
-    const scrollDepth = 1;
+    const scrollDepth = 10;
 
-    const navBar = document.querySelector("nav");
-    this.scrollY > scrollDepth ? navBar.style.paddingTop = "2rem" : navBar.style.paddingTop = "6rem";
-
-    this.scrollY > scrollDepth ? navBar.style.paddingBottom = "2rem" : navBar.style.paddingBottom = "4rem";
-
-    const navH1 = document.querySelector("nav h1");
-    this.scrollY > scrollDepth ? navH1.style.fontSize = "2rem" : navH1.style.fontSize = "3rem";
-
-    const navUl = document.querySelector("nav ul");
-    this.scrollY > scrollDepth ? navUl.style.marginTop = "1rem" : navUl.style.marginTop = "2rem";
-
-    // const navLi = navUl.getElementsByTagName("li");
-    // for (let i = 0; navLi[i]; i++) {
-    //     const temp = navLi[i].querySelector("a");
-    //     this.scrollY > 100 ? temp.style.fontSize = "1rem" : temp.style.fontSize = "1.2rem";
-    // }
+    let scrolled = this.scrollY > scrollDepth;
+    scrolled ? navBar.style.paddingTop = "2rem" : navBar.style.paddingTop = "6rem";
+    scrolled ? navBar.style.paddingBottom = "2rem" : navBar.style.paddingBottom = "4rem";
+    scrolled ? navH1.style.fontSize = "2rem" : navH1.style.fontSize = "3rem";
+    scrolled ? navUl.style.marginTop = "1rem" : navUl.style.marginTop = "2rem";
 });
 
 /*
