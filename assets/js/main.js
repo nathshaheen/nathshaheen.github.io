@@ -22,22 +22,6 @@ lightModeToggle.addEventListener('click', () => {
 });
 
 /*
- * Minimal navigation bar on scroll
- */
-const navBar = document.querySelector("nav");
-const navH1 = document.querySelector("nav h1");
-const navUl = document.querySelector("nav ul");
-window.addEventListener("scroll", () => {
-    const scrollDepth = 10;
-
-    let scrolled = this.scrollY > scrollDepth;
-    scrolled ? navBar.style.paddingTop = "2rem" : navBar.style.paddingTop = "6rem";
-    scrolled ? navBar.style.paddingBottom = "2rem" : navBar.style.paddingBottom = "4rem";
-    scrolled ? navH1.style.fontSize = "2rem" : navH1.style.fontSize = "3rem";
-    scrolled ? navUl.style.marginTop = "1rem" : navUl.style.marginTop = "2rem";
-});
-
-/*
  * Page up button
  */
 

@@ -93,19 +93,15 @@ body {
 
 #main-content {
   margin-bottom: 4rem;
-  margin-top: 16rem;
 }
 
 /* NAVIGATION BAR */
 
 nav {
   background-color: $dark-primary-color;
-  left: 0;
-  padding: 6rem calc((100vw - 48rem) / 2) 4rem calc((100vw - 48rem) / 2);
-  position: fixed;
-  top: 0;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   transition: padding-top 400ms, padding-bottom 400ms, background-color 400ms;
-  width: 48rem;
   z-index: 1;
 }
 
@@ -384,12 +380,6 @@ nav ul li a:visited:not(.current) {
 
   body {
     width: 24rem;
-  }
-
-  nav {
-    width: 24rem;
-    padding-left: calc((100vw - 24rem) / 2);
-    padding-right: calc((100vw - 24rem) / 2);
   }
 
   #appearance-toggle {
