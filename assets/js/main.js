@@ -9,11 +9,21 @@ const enableLightMode = () => {
 
 const disableLightMode = () => {
     document.body.classList.remove('light-mode');
-    localStorage.setItem('lightMode', null);
+    localStorage.setItem('lightMode', 'disabled');
 }
 
 if (localStorage.getItem("lightMode") === 'enabled') {
     enableLightMode();
+} else if (localStorage.getItem("lightMode") === 'disabled') {
+    disableLightMode();
+} else {
+    // No mode has previously been selected so determine mode based on system settings
+    let prefersLight = window.matchMedia("(prefers-color-scheme:light)").matches;
+    if (prefersLight) {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
 }
 
 const lightModeToggle = document.getElementById('appearance-toggle');

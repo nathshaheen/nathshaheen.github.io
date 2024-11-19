@@ -42,7 +42,6 @@ button {
 .title {
   font-size: 3rem;
   line-height: 1em;
-  transition: font-size 400ms;
 }
 
 .heading {
@@ -101,7 +100,7 @@ nav {
   background-color: $dark-primary-color;
   padding-top: 6rem;
   padding-bottom: 4rem;
-  transition: padding-top 400ms, padding-bottom 400ms, background-color 400ms;
+  transition: background-color 400ms;
   z-index: 1;
 }
 
@@ -133,8 +132,8 @@ nav ul li a:visited:not(.current) {
 
 #appearance-toggle {
   background-image: url(/assets/images/icons/dark-appearance-icon.svg);
-  margin-right: 1rem;
-  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
   position: fixed;
   right: 0;
   top: 0;
@@ -148,8 +147,8 @@ nav ul li a:visited:not(.current) {
   background-image: url(/assets/images/icons/dark-page-up-icon.svg);
   bottom: 0;
   display: none;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
   position: fixed;
   right: calc((100vw - 48rem) / 2);
 }
@@ -382,15 +381,8 @@ nav ul li a:visited:not(.current) {
     width: 24rem;
   }
 
-  #appearance-toggle {
-    margin-right: 2rem;
-    margin-top: 2rem;
-  }
-
   #page-up {
     bottom: 0;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
     position: fixed;
     right: 0;
   }
