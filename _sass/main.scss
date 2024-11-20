@@ -54,6 +54,10 @@ button {
   line-height: 1.5em;
 }
 
+.center-text {
+  text-align: center;
+}
+
 nav ul li a {
   color: $light-primary-color;
   display: inline-block;
@@ -111,7 +115,6 @@ nav {
 nav ul {
   display: flex;
   margin-top: 2rem;
-  transition: margin-top 400ms;
 }
 
 nav ul li {
@@ -161,6 +164,10 @@ nav ul li a:visited:not(.current) {
  * ABOUT PAGE
  */
 
+#landing-content {
+  height: calc(100vh - 22rem);
+}
+
 #social-links {
   display: flex;
   margin-top: 4rem;
@@ -199,25 +206,47 @@ nav ul li a:visited:not(.current) {
   background-image: url(/assets/images/icons/light-linkedin-icon.svg);
 }
 
+#cv-icon {
+  background-image: url(/assets/images/icons/dark-cv-icon.svg);
+}
+
+.light-mode #cv-icon {
+  background-image: url(/assets/images/icons/light-cv-icon.svg);
+}
+
 /*
  * CARD
  */
 
 #card-list li:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-.card a {
+.card {
   background-color: $dark-secondary-color;
   border-radius: 0.5rem;
-  color: $light-primary-color;
-  display: flex;
   padding: 1rem;
   transition: background-color 400ms, color 400ms;
 }
 
-.light-mode .card a {
+.card > div {
+  padding: 1rem;
+}
+
+.card ul {
+  margin-top: 2rem;
+}
+
+.card a {
+  display: flex;
+  color: $light-primary-color;
+}
+
+.light-mode .card {
   background-color: $light-secondary-color;
+}
+
+.light-mode .card a {
   color: $dark-primary-color;
 }
 
