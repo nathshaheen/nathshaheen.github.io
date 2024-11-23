@@ -1,16 +1,20 @@
 ---
 title: Projects
 ---
-<ul id="card-list">
-    {% for project in site.projects %}
-    <li class="card">
-        <a href="{{ project.url }}">
-            <img src="{{ project.thumbnail }}" alt="Thumbnail" class="thumbnail">
-            <div class="card-content">
-                <h2 class="heading">{{ project.title }}</h2>
-                {{ project.excerpt | truncatewords: 50 }}
-            </div>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+<main>
+    <h2>My projects</h2>
+    <ul class="card-list">
+        {% for project in site.projects %}
+        <li class="card">
+            <a href="{{ project.url }}">
+                <img src="{{ project.thumbnail }}" alt="Thumbnail" class="card-thumbnail">
+                <div class="card-content">
+                    <h3 class="card-heading">{{ project.title }}</h3>
+                    <p class="caption">Tag1 Tag2 Tag3</p>
+                    {{ project.excerpt | truncatewords: 50 }}
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</main>

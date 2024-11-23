@@ -26,7 +26,7 @@ if (localStorage.getItem("lightMode") === 'enabled') {
     }
 }
 
-const lightModeToggle = document.getElementById('appearance-toggle');
+const lightModeToggle = document.getElementById('mode-toggle');
 lightModeToggle.addEventListener('click', () => {
     localStorage.getItem("lightMode") !== 'enabled' ? enableLightMode() : disableLightMode();
 });
