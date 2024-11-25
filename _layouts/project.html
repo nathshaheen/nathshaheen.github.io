@@ -3,10 +3,10 @@ layout: default
 ---
 <main>
     <div class="post">
-        <h2>{{ page.title }}</h2>
+        <h1 class="title">{{ page.title }}</h1>
         <p class="caption">Tag1 Tag2 Tag3</p>
-        <div id="thumbnail-container">
-            <img src="{{ page.thumbnail }}" alt="Thumbnail">
+        <div class="center">
+            <img class="thumbnail" src="{{ page.thumbnail }}" alt="Thumbnail">
         </div>
         {{ content }}
     </div>

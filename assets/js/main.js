@@ -3,47 +3,47 @@
  */
 
 const enableLightMode = () => {
-    document.body.classList.add('light-mode');
-    localStorage.setItem('lightMode', 'enabled');
+    document.body.classList.add('light-appearance');
+    localStorage.setItem('lightAppearance', 'enabled');
 }
 
 const disableLightMode = () => {
-    document.body.classList.remove('light-mode');
-    localStorage.setItem('lightMode', 'disabled');
+    document.body.classList.remove('light-appearance');
+    localStorage.setItem('lightAppearance', 'disabled');
 }
 
-if (localStorage.getItem("lightMode") === 'enabled') {
+if (localStorage.getItem("lightAppearance") === 'enabled') {
     enableLightMode();
-} else if (localStorage.getItem("lightMode") === 'disabled') {
+} else if (localStorage.getItem("lightAppearance") === 'disabled') {
     disableLightMode();
 } else {
     // No mode has previously been selected so determine mode based on system settings
     let prefersLight = window.matchMedia("(prefers-color-scheme:light)").matches;
     if (prefersLight) {
-        document.body.classList.add('light-mode');
+        document.body.classList.add('light-appearance');
     } else {
-        document.body.classList.remove('light-mode');
+        document.body.classList.remove('light-appearance');
     }
 }
 
-const lightModeToggle = document.getElementById('mode-toggle');
+const lightModeToggle = document.getElementById('appearance-toggle');
 lightModeToggle.addEventListener('click', () => {
-    localStorage.getItem("lightMode") !== 'enabled' ? enableLightMode() : disableLightMode();
+    localStorage.getItem("lightAppearance") !== 'enabled' ? enableLightMode() : disableLightMode();
 });
 
 /*
  * Page up button
  */
 
-const pageUpButton = document.getElementById("page-up");
-window.onscroll = () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        pageUpButton.style.display = "block";
-    } else {
-        pageUpButton.style.display = "none";
-    }
-}
-
-const pageUp = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// const pageUpButton = document.getElementById("page-up");
+// window.onscroll = () => {
+//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//         pageUpButton.style.display = "block";
+//     } else {
+//         pageUpButton.style.display = "none";
+//     }
+// }
+//
+// const pageUp = () => {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+// }
