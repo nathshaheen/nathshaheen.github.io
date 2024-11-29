@@ -1,19 +1,33 @@
+//COLORS
+
 $dark-primary-color: #1C1C1E;
 $dark-secondary-color: #2C2C2E;
 $dark-tertiary-color: #3A3A3C;
 $dark-quaternary-color: #48484A;
+
 $light-primary-color: #F2F2F7;
 $light-secondary-color: #E5E5EA;
 $light-tertiary-color: #D1D1D6;
 $light-quaternary-color: #C7C7CC;
+
 $accent-color: #0A84FF;
 $caption-color: #8E8E93;
 
+// FONTS
+
 $primary-font-family: "Inter", sans-serif;
 
-$icon-button-size: 1.5rem;
+// TRANSITIONS
 
 $appearance-trans-speed: 400ms;
+
+// SIZING
+
+$large-screen-size: 96rem;
+$medium-screen-size: 64rem; // DEFAULT
+$small-screen-size: 32rem;
+
+$icon-button-size: 1.5rem;
 
 /*
  * RESET
@@ -93,7 +107,7 @@ body {
 
 main {
   margin: 0 auto 8rem auto;
-  width: 64rem;
+  width: $medium-screen-size;
 }
 
 .light-appearance {
@@ -253,7 +267,7 @@ nav {
   height: 4rem;
   justify-content: space-between;
   margin: auto;
-  width: 64rem;
+  width: $medium-screen-size;
   z-index: 1;
 }
 
@@ -285,7 +299,7 @@ nav ul li:not(:first-child) {
 
 #landing {
   margin: 12rem auto;
-  width: 64rem;
+  width: $medium-screen-size;
 }
 
 #landing .title {
@@ -334,8 +348,8 @@ nav ul li:not(:first-child) {
 #education {
   display: flex;
   flex-direction: column;
-  padding: 0 calc((100vw - 64rem) / 2);
-  width: 64rem;
+  padding: 0 calc((100vw - $medium-screen-size) / 2);
+  width: $medium-screen-size;
 }
 
 // EXPERIENCE
@@ -343,8 +357,8 @@ nav ul li:not(:first-child) {
 #experience {
   display: flex;
   flex-direction: column;
-  padding: 0 calc((100vw - 64rem) / 2) 8rem calc((100vw - 64rem) / 2);
-  width: 64rem;
+  padding: 0 calc((100vw - $medium-screen-size) / 2) 8rem calc((100vw - $medium-screen-size) / 2);
+  width: $medium-screen-size;
 }
 
 #experience .bullet-point:not(:first-child)::before {
@@ -355,14 +369,14 @@ nav ul li:not(:first-child) {
 // MORE ABOUT
 
 #more-about {
-  max-width: 160rem;
+  max-width: 128rem;
   margin-bottom: 8rem;
   overflow: hidden;
   width: 100vw;
 }
 
 #more-about .title {
-  margin-left: calc((100vw - 64rem) / 2);
+  margin-left: calc((100vw - $medium-screen-size) / 2);
 }
 
 /*
@@ -499,11 +513,86 @@ nav ul li:not(:first-child) {
   border: 1px solid $dark-primary-color;
 }
 
-@media screen and (max-width: 1087px), (orientation: portrait) {
-  html {
-    font-size: 32px;
+/*
+ * LARGE SCREEN
+ */
+
+@media screen and (min-width: 1568px) {
+  main {
+    width: $large-screen-size;
   }
 
+  nav {
+    width: $large-screen-size;
+  }
+
+  #landing {
+    width: $large-screen-size;
+  }
+
+  #education {
+    padding: 0 calc((100vw - $large-screen-size) / 2);
+    width: $large-screen-size;
+  }
+
+  #experience {
+    padding: 0 calc((100vw - $large-screen-size) / 2) 8rem calc((100vw - $large-screen-size) / 2);
+    width: $large-screen-size;
+  }
+
+  #more-about .title {
+    margin-left: calc((100vw - $large-screen-size) / 2);
+  }
+}
+
+// RESTRICT SCREEN FROM BECOMING TOO LARGE
+
+@media screen and (min-width: 2048px) {
+  #more-about {
+    margin-left: calc((100vw - 128rem) / 2);
+  }
+
+  #more-about .title {
+    margin-left: calc((128rem - $large-screen-size) / 2);
+  }
+}
+
+/*
+ * SMALL SCREEN SIZING
+ */
+
+@media screen and (min-width: 576px) and (max-width: 1087px) {
+  main {
+    width: $small-screen-size;
+  }
+
+  nav {
+    width: $small-screen-size;
+  }
+
+  #landing {
+    width: $small-screen-size;
+  }
+
+  #education {
+    padding: 0 calc((100vw - $small-screen-size) / 2);
+    width: $small-screen-size;
+  }
+
+  #experience {
+    padding: 0 calc((100vw - $small-screen-size) / 2) 8rem calc((100vw - $small-screen-size) / 2);
+    width: $small-screen-size;
+  }
+
+  #more-about .title {
+    margin-left: calc((100vw - $small-screen-size) / 2);
+  }
+}
+
+/*
+ * X SMALL SCREEN SIZING
+ */
+@media screen and (max-width: 575px){
   main {
     width: calc(100vw - 4rem);
   }
@@ -547,15 +636,5 @@ nav ul li:not(:first-child) {
 
   .card-content {
     margin: 2rem 0 0 0;
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  #more-about {
-    margin-left: calc((100vw - 160rem) / 2);
-  }
-
-  #more-about .title {
-    margin-left: calc((160rem - 64rem) / 2);
   }
 }
