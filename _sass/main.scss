@@ -348,7 +348,7 @@ nav ul li:not(:first-child) {
 #education {
   display: flex;
   flex-direction: column;
-  padding: 0 calc((100vw - $medium-screen-size) / 2);
+  padding: 0 calc((100vw - #{$medium-screen-size}) / 2);
   width: $medium-screen-size;
 }
 
@@ -357,7 +357,7 @@ nav ul li:not(:first-child) {
 #experience {
   display: flex;
   flex-direction: column;
-  padding: 0 calc((100vw - $medium-screen-size) / 2) 8rem calc((100vw - $medium-screen-size) / 2);
+  padding: 0 calc((100vw - #{$medium-screen-size}) / 2) 8rem calc((100vw - #{$medium-screen-size}) / 2);
   width: $medium-screen-size;
 }
 
@@ -376,7 +376,7 @@ nav ul li:not(:first-child) {
 }
 
 #more-about .title {
-  margin-left: calc((100vw - $medium-screen-size) / 2);
+  margin-left: calc((100vw - #{$medium-screen-size}) / 2);
 }
 
 /*
@@ -531,17 +531,17 @@ nav ul li:not(:first-child) {
   }
 
   #education {
-    padding: 0 calc((100vw - $large-screen-size) / 2);
+    padding: 0 calc((100vw - #{$large-screen-size}) / 2);
     width: $large-screen-size;
   }
 
   #experience {
-    padding: 0 calc((100vw - $large-screen-size) / 2) 8rem calc((100vw - $large-screen-size) / 2);
+    padding: 0 calc((100vw - #{$large-screen-size}) / 2) 8rem calc((100vw - #{$large-screen-size}) / 2);
     width: $large-screen-size;
   }
 
   #more-about .title {
-    margin-left: calc((100vw - $large-screen-size) / 2);
+    margin-left: calc((100vw - #{$large-screen-size}) / 2);
   }
 }
 
@@ -553,7 +553,7 @@ nav ul li:not(:first-child) {
   }
 
   #more-about .title {
-    margin-left: calc((128rem - $large-screen-size) / 2);
+    margin-left: calc((128rem - #{$large-screen-size}) / 2);
   }
 }
 
@@ -575,17 +575,17 @@ nav ul li:not(:first-child) {
   }
 
   #education {
-    padding: 0 calc((100vw - $small-screen-size) / 2);
+    padding: 0 calc((100vw - #{$small-screen-size}) / 2);
     width: $small-screen-size;
   }
 
   #experience {
-    padding: 0 calc((100vw - $small-screen-size) / 2) 8rem calc((100vw - $small-screen-size) / 2);
+    padding: 0 calc((100vw - #{$small-screen-size}) / 2) 8rem calc((100vw - #{$small-screen-size}) / 2);
     width: $small-screen-size;
   }
 
   #more-about .title {
-    margin-left: calc((100vw - $small-screen-size) / 2);
+    margin-left: calc((100vw - #{$small-screen-size}) / 2);
   }
 }
 
