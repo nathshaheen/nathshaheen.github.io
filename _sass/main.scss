@@ -352,6 +352,11 @@ nav ul li:not(:first-child) {
   width: $medium-screen-size;
 }
 
+#education .bullet-point:not(:first-child)::before {
+  bottom: 4rem;
+  top: -5rem;
+}
+
 // EXPERIENCE
 
 #experience {
@@ -610,9 +615,17 @@ nav ul li:not(:first-child) {
     width: calc(100vw - 4rem);
   }
 
+  #education .bullet-point:not(:first-child)::before {
+    display: none;
+  }
+
   #experience {
     padding: 0 2rem 8rem 2rem;
     width: calc(100vw - 4rem);
+  }
+
+  #experience .bullet-point:not(:first-child)::before {
+    display: none;
   }
 
   #more-about .title {
